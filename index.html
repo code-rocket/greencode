@@ -12,7 +12,7 @@
         body {
             width: 100%;
             height: 100%;
-            height: 100vh;
+            /*height: 100vh;*/
         }
 
         .back {
@@ -44,7 +44,8 @@
             left: 400px;
         }
 
-        .mask {
+        #mask {
+            display: none;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -58,7 +59,7 @@
             width: 60%;
             height: 330px;
             background: white;
-            top: 340px;
+            top: 320px;
             left: 50%;
             /*css3   transform 实现*/
             transform: translate(-50%, 0);
@@ -66,19 +67,19 @@
             border-radius: 30px;
         }
 
-        .back .alert_window .top {
+        .back .alert_window #top {
             padding: 40px 30px 0 30px;
             height: 220px;
             box-sizing: border-box;
         }
 
-        .back .alert_window .bottom {
+        .back .alert_window #bottom {
             height: 110px;
             line-height: 100px;
             padding: 0 30px;
             color: #1e7fe4;
             font-size: 2.4em;
-            border-top: 1px solid rgba(0,0,0,.15);
+            border-top: 1px solid rgba(0, 0, 0, .15);
             text-align: center;
             box-sizing: border-box;
         }
@@ -99,14 +100,14 @@
     <div id="reapply"></div>
     <div id="problem"></div>
 
-    <div class="mask">
+    <div id="mask">
         <div class="alert_window">
-            <div class="top">
+            <div id="top">
                 <p>您已修改过申请信息，不能重复修</p>
                 <p>改。如有问题请联系服务热线：</p>
                 <p>0571-12345-6</p>
             </div>
-            <div class="bottom">
+            <div id="bottom" onclick="close();">
                 知道了
             </div>
         </div>
@@ -115,10 +116,18 @@
 
 </div>
 <script>
-    document.getElementById('reapply').onclick = function () {
-        window.location.href = 'https://www.alipay_r.com/reapply/greencode/kiloe';
+    var mask = document.getElementById('mask')
+    var bottom = document.getElementById('bottom')
+    var reapply = document.getElementById('reapply')
+    var problem = document.getElementById('problem')
+
+    bottom.onclick = function () {
+        mask.style.display = 'none';
     };
-    document.getElementById('problem').onclick = function () {
+    reapply.onclick = function () {
+        mask.style.display = 'block';
+    };
+    problem.onclick = function () {
         window.location.href = 'https://h5.dingtalk.com/healthAct/index.html?corpId=ding888e70e797bb46f1&source=dingHealth&from=singlemessage&isappinstalled=0#/faq';
     }
 </script>
