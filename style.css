@@ -26,11 +26,11 @@ body {
     width: 500px;
     height: 30px;
     line-height: 30px;
-    top: 360px;
-    left: 75px;
-    font-size: 1.85em;
+    top: 405px;
+    left: 85px;
+    font-size: 2.05em;
     background: #fff;
-    color: rgba(112,112,112,.8);
+    color: rgba(112,112,112,.75);
     z-index: 9999;
 }
 
