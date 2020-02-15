@@ -31,7 +31,7 @@ body {
     font-size: 2.05em;
     background: #fff;
     color: rgba(112,112,112,.75);
-    z-index: 9999;
+    z-index: 999;
 }
 
 .back #reapply {
@@ -41,6 +41,7 @@ body {
     background: transparent;
     top: 300px;
     left: 700px;
+    z-index: 999;
 }
 
 .back #problem {
@@ -50,6 +51,7 @@ body {
     background: transparent;
     bottom: 100px;
     left: 400px;
+    z-index: 999;
 }
 
 #mask {
@@ -60,6 +62,7 @@ body {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, .4);
+    z-index: 9999;
 }
 
 .back .alert_window {
